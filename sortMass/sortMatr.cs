@@ -18,7 +18,7 @@ namespace sortMass
         /// <param name="columns">количество колонок в массиве</param>
         /// <returns>возвращает одномерный массив</returns>
         /// 
-     /*   public int[] TwoToOne(int[]TempMass, int[,] mass, int rows, int columns)
+        public int[] TwoToOne(int[]TempMass, int[,] mass, int rows, int columns)
         {   
             int k = 0; //переменная для хранения индекса временного массива
             for (int i = 0; i < rows; i++)
@@ -29,22 +29,11 @@ namespace sortMass
                 }
             return TempMass;       
 
-        }   */
+        }   
         
         public int[] BubbleSort(int[] TempMass, int rows, int columns)
         {
-
-
-
-            int k = 0; //переменная для хранения индекса временного массива
-            for (int i = 0; i < rows; i++)
-                for (int j = 0; j < columns; j++)
-                {
-                    TempMass[k] = mass[i, j];
-                    k++;
-                }
-
-
+            TwoToOne(TempMass, mass, rows, columns);
 
             int tmp = 0;
             for (int i = 0; i < TempMass.Length; i++)
@@ -60,18 +49,7 @@ namespace sortMass
                 }
             }
 
-
-            int k = 0; //переменная для хранения индекса временного массива
-            for (int i = 0; i < rows; i++)
-                for (int j = 0; j < columns; j++)
-                {
-                    mass[i, j] = TempMass[k];
-                    k++;
-                }
-            return mass;
-
-       
-            //return TempMass;
+            return TempMass;
         }
         
 
@@ -103,8 +81,11 @@ namespace sortMass
         /// <param name="mass">двумерный массив</param>
         /// <param name="rows">количество строк в массиве</param>
         /// <param name="columns">количество колонок в массиве</param>
-   /*     public int[,] OneToTwo(int[] TempMass, int[,] mass, int rows, int columns)
+        public int[,] OneToTwo(int[] TempMass, int[,] mass, int rows, int columns)
         {
+
+            BubbleSort(TempMass, rows, columns);
+
             int k = 0; //переменная для хранения индекса временного массива
             for (int i = 0; i < rows; i++)
                 for (int j = 0; j < columns; j++)
@@ -114,6 +95,6 @@ namespace sortMass
                 }
             return mass;
 
-        }  */
+        }  
     }
 }
