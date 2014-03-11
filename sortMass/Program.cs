@@ -11,9 +11,10 @@ namespace sortMass
                     {8,2,5},
                     {5,3,7},
                     {4,10,-2},
-                    {4,6,11}
+                    {4,6,11},
+                    {1,22,41}
                 };
-            int rows = 4;
+            int rows = 5;
             int columns = 3;
             int[] TempMass = new int[rows * columns];
 
