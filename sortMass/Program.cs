@@ -21,11 +21,11 @@ namespace sortMass
             s.PrintMass(rows, columns);
 
             //отсортированный пузырьком
-            int[,] SortMass = s.OneToTwo(TempMass, mass, rows, columns);
+            int[,] SortMass = s.OneToTwoBubbleSort(TempMass, mass, rows, columns);
             s.PrintMass(rows, columns);
 
             //отсортированный вставками
-            int[,] SecondSort = s.InsertSort();
+            int[,] SecondSort = s.OneToTwoInsertSort(TempMass, mass, rows, columns);
             s.PrintMass(rows, columns);
 
             Console.ReadKey();
