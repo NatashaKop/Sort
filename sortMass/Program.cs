@@ -8,12 +8,13 @@ namespace sortMass
         {
             int[,] mass =
                 {
-                    {8,2},
-                    {5,3},
-                    {4,10}
+                    {8,2,5},
+                    {5,3,7},
+                    {4,10,-2},
+                    {4,6,11}
                 };
-            int rows = 3;
-            int columns = 2;
+            int rows = 4;
+            int columns = 3;
             int[] TempMass = new int[rows * columns];
 
             sortMatr s = new sortMatr(mass);
